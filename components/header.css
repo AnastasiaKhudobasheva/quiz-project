@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  background-color: hotpink;
+  display: fixed;
+}
+
+h1 {
+  color: pink;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
