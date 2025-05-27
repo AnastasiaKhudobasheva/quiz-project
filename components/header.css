@@ -2,13 +2,19 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 10vh;
+  width: 100%;
+  min-height: 60px;
   background-color: hotpink;
-  display: fixed;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 h1 {
   color: pink;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Georgia", serif;
+  margin: 0;
+  text-align: center;
 }
