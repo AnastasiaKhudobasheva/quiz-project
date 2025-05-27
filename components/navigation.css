@@ -1,0 +1,13 @@
+nav {
+  background-color: hotpink;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0.7rem;
+}
