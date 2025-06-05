@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./js/form.js" defer></script>
+    <title>Georgian Wine Quiz</title>
+  </head>
+  <body>
+    <header>
+      <h1>Georgian Wine Quiz</h1>
+    </header>
+
+    <main>
+      <form
+        id="cardForm"
+        class="card"
+        data-js="card-form"
+        style="margin: 40px auto"
+      >
+        <label for="question">Your question:</label>
+        <textarea
+          id="question"
+          name="question"
+          data-js="question-input"
+          rows="4"
+          cols="35"
+          maxlength="150"
+          required
+        ></textarea>
+        <span class="counter" data-js="question-count"
+          >150 characters left</span
+        >
+
+        <label for="answer">Your answer:</label>
+        <textarea
+          id="answer"
+          name="answer"
+          data-js="answer-input"
+          rows="4"
+          cols="35"
+          maxlength="150"
+          required
+        ></textarea>
+        <span class="counter" data-js="answer-count">150 characters left</span>
+
+        <label for="tag">Tag:</label>
+        <input
+          type="text"
+          id="tag"
+          name="tag"
+          placeholder="e.g. history"
+          required
+        />
+
+        <button type="submit" class="card__show-answer">Submit</button>
+      </form>
+
+      <div data-js="card-container"></div>
+    </main>
+
+    <footer>
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html">
+              <svg
+                aria-label="Home"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="black"
+                stroke-width="2.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-house-icon lucide-house"
+              >
+                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                <path
+                  d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="./bookmarks.html"
+              ><svg
+                aria-label="Bookmarks"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="black"
+                stroke-width="2.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-bookmark-icon lucide-bookmark"
+              >
+                <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="./form.html">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="black"
+                stroke-width="6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-plus-icon lucide-plus"
+              >
+                <path d="M5 12h14" />
+                <path d="M12 5v14" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="./profile.html">
+              <svg
+                aria-label="Profile"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="black"
+                stroke-width="2.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-amphora-icon lucide-amphora"
+              >
+                <path
+                  d="M10 2v5.632c0 .424-.272.795-.653.982A6 6 0 0 0 6 14c.006 4 3 7 5 8"
+                />
+                <path d="M10 5H8a2 2 0 0 0 0 4h.68" />
+                <path
+                  d="M14 2v5.632c0 .424.272.795.652.982A6 6 0 0 1 18 14c0 4-3 7-5 8"
+                />
+                <path d="M14 5h2a2 2 0 0 1 0 4h-.68" />
+                <path d="M18 22H6" />
+                <path d="M9 2h6" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
