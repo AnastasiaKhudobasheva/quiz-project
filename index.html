@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
     <title>Georgian Wine Quiz</title>
+    <script src="./js/index.js" defer></script>
   </head>
   <body>
     <header><h1>Georgian Wine Quiz</h1></header>
@@ -12,10 +13,16 @@
     <main>
       <section class="card">
         <h2 class="card__question">Where is Georgia located?</h2>
-        <button class="card__show-answer" aria-expanded="false">
+        <button
+          class="card__show-answer"
+          data-js="answer-button"
+          aria-expanded="false"
+        >
           Show Answer
         </button>
-        <article class="card__answer" hidden>Eastern Europe</article>
+        <article class="card__answer hidden" data-js="answer">
+          Eastern Europe
+        </article>
         <aside>
           <ul class="card__tags">
             <li class="card__tags-tag">regions</li>
@@ -23,18 +30,17 @@
             <li class="card__tags-tag">fun culture facts</li>
           </ul>
         </aside>
-        <button class="card__bookmark" aria-pressed="false">
+        <button
+          class="card__bookmark bookmark--active"
+          aria-labelledby="bookmark"
+          data-js="bookmark-button"
+        >
           <svg
+            class="bookmark-tag"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
             viewBox="0 0 24 24"
-            fill="black"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-bookmark-icon lucide-bookmark"
           >
             <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
           </svg>
@@ -57,16 +63,11 @@
         </aside>
         <button class="card__bookmark" aria-pressed="false">
           <svg
+            class="bookmark-tag"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
             viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-bookmark-icon lucide-bookmark"
           >
             <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
           </svg>
@@ -429,9 +430,9 @@
     <nav>
       <ul>
         <li>
-          <a href="./index.html"></a>
+          <a href="./index.html">
             <svg
-            aria-label="Home"
+              aria-label="Home"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -466,6 +467,25 @@
               class="lucide lucide-bookmark-icon lucide-bookmark"
             >
               <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="./form.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="black"
+              stroke-width="2.3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-plus-icon lucide-plus"
+            >
+              <path d="M5 12h14" />
+              <path d="M12 5v14" />
             </svg>
           </a>
         </li>

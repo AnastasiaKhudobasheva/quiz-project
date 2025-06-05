@@ -34,6 +34,10 @@
   cursor: pointer;
 }
 
+.hidden {
+  display: none;
+}
+
 .card__tags {
   position: absolute;
   left: 0;
@@ -59,4 +63,78 @@
   border-radius: 20px;
   padding: 4px;
   border: none;
+}
+
+.bookmark-tag {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+}
+
+.bookmark--active svg {
+  fill: black;
+  color: black;
+  stroke: currentColor;
+  stroke-width: 2.5;
+}
+
+.counter {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+  color: black;
+}
+
+/* .card__bookmark--active svg {
+  position: absolute;
+  right: -18px;
+  top: -10px;
+  background-color: pink;
+  border-radius: 20px;
+  padding: 4px;
+  border: none;
+  fill: black;
+}
+
+.card__bookmark--inactive svg {
+  position: absolute;
+  right: -18px;
+  top: -10px;
+  background-color: pink;
+  border-radius: 20px;
+  padding: 4px;
+  border: none;
+  fill: none;
+} */
+
+.form.card {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 370px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  gap: 15px;
+}
+
+form.card label {
+  font-weight: bold;
+  color: darkred;
+  margin-bottom: 30px;
+}
+
+form.card button[type="submit"] {
+  background-color: pink;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form.card button[type="submit"]:hover {
+  background-color: #ff69b4cc;
 }
