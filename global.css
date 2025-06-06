@@ -38,4 +38,7 @@ main {
     justify-content: center;
     gap: 30px;
   }
+  main.form-tab {
+    flex-direction: column;
+  }
 }
