@@ -83,6 +83,7 @@
   text-align: right;
   font-size: 0.8rem;
   color: black;
+  width: 300px;
 }
 
 /* .card__bookmark--active svg {
@@ -106,6 +107,10 @@
   border: none;
   fill: none;
 } */
+
+textarea {
+  width: 300px;
+}
 
 .form.card {
   background-color: whitesmoke;
