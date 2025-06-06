@@ -29,14 +29,37 @@ form.addEventListener("submit", (event) => {
       : "Hide Answer";
   });
 
-  const cardTag = document.createElement("span");
+  const cardTags = document.createElement("ul");
+  cardTags.className = "card__tags";
+  const cardTag = document.createElement("li");
   cardTag.className = "card__tags-tag";
   cardTag.textContent = tag;
+  cardTags.append(cardTag);
+
+  const cardBookmark = document.createElement("button");
+  cardBookmark.className = "card__bookmark";
+  const svg = `
+ <svg
+            class="bookmark-tag"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+          </svg>
+  `;
+  cardBookmark.innerHTML = svg;
+
+  cardBookmark.addEventListener("click", () => {
+    cardBookmark.classList.toggle("bookmark--active");
+  });
 
   card.appendChild(cardQuestion);
   card.appendChild(answerButton);
   card.appendChild(cardAnswer);
-  card.appendChild(cardTag);
+  card.appendChild(cardTags);
+  card.appendChild(cardBookmark);
 
   cardContainer.appendChild(card);
 
