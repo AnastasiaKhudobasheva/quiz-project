@@ -110,6 +110,7 @@
 
 textarea {
   width: 300px;
+  resize: none;
 }
 
 .form.card {

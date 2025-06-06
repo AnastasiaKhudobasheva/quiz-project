@@ -3,9 +3,9 @@ const cardContainer = document.querySelector('[data-js="card-container"]');
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  const question = form.question.value;
-  const answer = form.answer.value;
-  const tag = form.tag.value;
+  const question = event.target.question.value;
+  const answer = event.target.answer.value;
+  const tag = event.target.tag.value;
   const card = document.createElement("section");
   card.classList.add("card");
 
@@ -18,15 +18,20 @@ form.addEventListener("submit", (event) => {
   answerButton.textContent = "Show Answer";
 
   const cardAnswer = document.createElement("article");
-  cardAnswer.className = "card__answer";
+  cardAnswer.className = "card__answer hidden";
+  // cardAnswer.className = "card__answer";
   cardAnswer.textContent = answer;
-  cardAnswer.hidden = true;
+  // cardAnswer.hidden = true;
 
   answerButton.addEventListener("click", () => {
-    cardAnswer.hidden = !cardAnswer.hidden;
-    answerButton.textContent = cardAnswer.hidden
-      ? "Show Answer"
-      : "Hide Answer";
+    cardAnswer.classList.toggle("hidden");
+    // cardAnswer.hidden = !cardAnswer.hidden;
+    // answerButton.textContent = cardAnswer.hidden
+    //   ? "Show Answer"
+    //   : "Hide Answer";
+    answerButton.textContent === "Show Answer"
+      ? (answerButton.textContent = "Hide Answer")
+      : (answerButton.textContent = "Show Answer");
   });
 
   const cardTags = document.createElement("ul");
